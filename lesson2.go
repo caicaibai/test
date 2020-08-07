@@ -14,10 +14,22 @@ func main() {
 
 	*r = "aaaaa"
 
-	var a int
+	//var a int
 
-	fmt.Println(res)
+	//fmt.Println(res)
 
-	fmt.Println(a)
+	//fmt.Println(a)
 
+	v := 1
+
+	inc(&v)
+
+	fmt.Println(v)
+}
+
+func inc(p *int) int {
+
+	*p++
+
+	return *p
 }
