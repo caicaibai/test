@@ -32,7 +32,14 @@ func main() {
 		text = re.ReplaceAllString(text, "")
 		fmt.Println(text)
 		subject := e.ChildTexts("li a[href]")
+		subjectType := e.ChildTexts("div[class=major-num] a")
 		insertData := []SubjectType{}
+		for _, name := range subjectType {
+			newName := re.ReplaceAllString(name, "")
+			s := SubjectType{newName, text}
+			insertData = append(insertData, s)
+
+		}
 		for _, name := range subject {
 			s := SubjectType{name, text}
 			insertData = append(insertData, s)
