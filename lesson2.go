@@ -14,6 +14,10 @@ func main() {
 
 	*r = "aaaaa"
 
+	var a int
+
 	fmt.Println(res)
+
+	fmt.Println(a)
 
 }
